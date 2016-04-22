@@ -4,7 +4,7 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 さらに、表示されているジョブもしくはオーダをクリックすることで、  該当のログをレスポンシブで表示できます。  
 
 ![images](/images/abstract.png)
-※開発中の画面のため、変更がある可能性があります。
+                              ※開発中の画面のため、変更がある可能性があります。
 
 # Release Notes
 * 2016/4/22 READMEを公開
@@ -35,7 +35,7 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする
 ![アクセスした際の画面](/images/usage1.png)
-※開発中の画面のため、変更がある可能性があります。
+                              ※開発中の画面のため、変更がある可能性があります。
 
 # Author
 [Takashi Adachi]

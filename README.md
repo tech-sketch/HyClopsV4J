@@ -9,7 +9,7 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
   
 ジョブのログを表示
 ![images](/images/abstract2.png)
-※開発中の画面のため、変更がある可能性があります。
+※開発中の画面のため、変更する可能性があります。
 
 # Release Notes
 * 2016/4/22 READMEを公開

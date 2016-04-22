@@ -32,7 +32,7 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 # Installation
    $ git clone https://github.com/tech-sketch/HyClopsV4J  
    $ vi viewer/js/viewer.js  
-     [url=http://jobscheduler_server:4444] → IPAddress of JobScheduler Server    
+     [url=http://jobscheduler_server:4444] → IPAddress of JobScheduler Server]   
    $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
    $ chmod -R JobScheduler_USER:JobScheduler_USER viewer/ jobmap_illustration.html  
 

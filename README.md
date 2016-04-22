@@ -2,8 +2,10 @@
 JobSchedulerのジョブの実行状態を可視化し、一目で失敗したジョブを特定できるようになります。  
 ジョブを基準とした表示だけでなく、オーダ基準によるジョブの状態の表示も可能です。  
 さらに、表示されているジョブもしくはオーダをクリックすることで、  該当のログをレスポンシブで表示できます。  
+NOTE: JobSchedulerについては[ここ](http://www.sos-berlin.com/jobscheduler)をご参照ください
 
-![images](/images/abstract.png)
+![images](/images/abstract1.png)
+![images](/images/abstract2.png)
 ※開発中の画面のため、変更がある可能性があります。
 
 # Release Notes
@@ -25,17 +27,20 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 # Architecture
 ![Architecture](/images/architecture.png)
 
-# Installation
    $ git clone https://github.com/tech-sketch/HyClopsV4J  
+# Installation
    $ vi viewer/js/viewer.js  
      [url=http://jobscheduler_server:4444] → IPAddress of JobScheduler Server    
    $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
    $ chmod -R JobScheduler_USER:JobScheduler_USER viewer/ jobmap_illustration.html  
 
 # Usage
-1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする
+1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする  
 ![アクセスした際の画面](/images/usage1.png)
-※開発中の画面のため、変更がある可能性があります。
+2. 日付、時刻、オーダ名、ジョブ名、ジョブチェイン名を適宜指定し、検索ボタンをクリックする  
+3. エラーが発生しているジョブやオーダがあれば該当する箇所をクリックし、ログを表示させ、  
+調査を行う
+
 
 # Author
 [Takashi Adachi]

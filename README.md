@@ -3,7 +3,7 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 ジョブを基準とした表示だけでなく、オーダ基準によるジョブの状態の表示も可能です。  
 さらに、表示されているジョブもしくはオーダをクリックすることで、  該当のログをレスポンシブで表示できます。  
 
-![images](/images/)
+![images](/images/abstract.png)
 ※開発中の画面のため、変更がある可能性があります。
 
 # Release Notes
@@ -23,7 +23,7 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
     - Google Chrome ver.40以上 or FireFox ver.40以上  
 
 # Architecture
-![Architecture](/images/)
+![Architecture](/images/architecture.png)
 
 # Installation
    $ git clone https://github.com/tech-sketch/HyClopsV4J  
@@ -34,7 +34,7 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする
-![アクセスした際の画面](/images/)
+![アクセスした際の画面](/images/usage1.png)
 ※開発中の画面のため、変更がある可能性があります。
 
 # Author

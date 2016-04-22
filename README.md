@@ -1,8 +1,8 @@
 # About
-JobSchedulerのジョブの実行状態を可視化し、一目で失敗したジョブを特定できるようになります。
-またジョブを基準とした表示だけでなく、オーダ基準によるジョブの状態の表示も可能です。
-さらに、表示されているジョブもしくはオーダをクリックすることで、
-該当のログをレスポンシブで表示できます。
+JobSchedulerのジョブの実行状態を可視化し、一目で失敗したジョブを特定できるようになります。  
+またジョブを基準とした表示だけでなく、オーダ基準によるジョブの状態の表示も可能です。  
+さらに、表示されているジョブもしくはオーダをクリックすることで、  
+該当のログをレスポンシブで表示できます。  
 
 ![images](/images/)
 ※開発中の画面のため、変更がある可能性があります。
@@ -29,12 +29,10 @@ Client:
 # Installation
 1. git clone https://github.com/tech-sketch/HyClopsV4J
 2. viewer/js/viewer.js を編集
-
-2. mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/
-3. 
-2. 配置したファイル/フォルダの所有者をJobScheduler実行ユーザへ変更する
+[url=http://jobscheduler_server:4444]をJobSchedulerサーバのIPアドレスに変更
+3. mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/
+4. 配置したファイル/フォルダの所有者をJobScheduler実行ユーザへ変更する
    chmod -R JobScheduler_USER:JobScheduler_USER viewer/ jobmap_illustration.html
-3. 
 
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする

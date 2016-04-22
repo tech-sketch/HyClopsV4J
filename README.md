@@ -4,9 +4,14 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 さらに、表示されているジョブもしくはオーダをクリックすることで、  該当のログをレスポンシブで表示できます。  
 NOTE: JobSchedulerについては[ここ](http://www.sos-berlin.com/jobscheduler)をご参照ください
 
+<<<<<<< HEAD
 ![images](/images/abstract1.png)
 ![images](/images/abstract2.png)
 ※開発中の画面のため、変更がある可能性があります。
+=======
+![images](/images/abstract.png)
+                              ※開発中の画面のため、変更がある可能性があります。
+>>>>>>> c8a7544b6b4e7588001d13e3fedeb115d84163c4
 
 # Release Notes
 * 2016/4/22 READMEを公開
@@ -37,10 +42,12 @@ NOTE: JobSchedulerについては[ここ](http://www.sos-berlin.com/jobscheduler
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする  
 ![アクセスした際の画面](/images/usage1.png)
+<<<<<<< HEAD
 2. 日付、時刻、オーダ名、ジョブ名、ジョブチェイン名を適宜指定し、検索ボタンをクリックする  
 3. エラーが発生しているジョブやオーダがあれば該当する箇所をクリックし、ログを表示させ、  
 調査を行う
 
+                              ※開発中の画面のため、変更がある可能性があります。
 
 # Author
 [Takashi Adachi]

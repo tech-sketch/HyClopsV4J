@@ -39,8 +39,7 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする  
-![アクセスした際の画面](/images/usage1.png)
-  
+![アクセスした際の画面](/images/usage1.png)  
 2. 日付、時刻、オーダ名、ジョブ名、ジョブチェイン名を適宜指定し、検索ボタンをクリックする  
 3. エラーが発生しているジョブやオーダがあれば該当する箇所をクリックし、ログを表示させて調査を行う
 

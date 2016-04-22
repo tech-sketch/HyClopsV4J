@@ -35,7 +35,7 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
    $ vi viewer/js/viewer.js  
      [url=http://jobscheduler_server:4444] → IPAddress of JobScheduler Server]   
    $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
-   $ chmod -R JobScheduler_USER:JobScheduler_USER viewer/ jobmap_illustration.html  
+   $ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  
 
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする  

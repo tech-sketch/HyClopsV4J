@@ -26,8 +26,8 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 # Architecture
 ![Architecture](/images/architecture.png)
 
-   $ git clone https://github.com/tech-sketch/HyClopsV4J  
 # Installation
+   $ git clone https://github.com/tech-sketch/HyClopsV4J  
    $ vi viewer/js/viewer.js  
      [url=http://jobscheduler_server:4444] → IPAddress of JobScheduler Server    
    $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  

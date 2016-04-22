@@ -7,20 +7,20 @@ JobSchedulerのジョブの実行状態を可視化し、一目で失敗した�
 ※開発中の画面のため、変更がある可能性があります。
 
 # Release Notes
-*2016/4/22 READMEを公開
+* 2016/4/22 READMEを公開
 
 # Features
 * ジョブの実行状態を可視化  
-** オーダ、ジョブ、ジョブチェインの3種類の表示に対応  
-** 日付/時刻、名前で表示したい情報をフィルタ可能  
+    ** オーダ、ジョブ、ジョブチェインの3種類の表示に対応  
+    ** 日付/時刻、名前で表示したい情報をフィルタ可能  
 * 表示されているジョブフローから任意のジョブのログを1クリックで表示可能  
 * 全てレスポンシブで表示可能  
 
 # Requirement
-JobScheduler Server:
-- JobScheduler Server 1.10.x
-Client:
-- Google Chrome ver.40以上 or FireFox ver.40以上
+JobScheduler Server:  
+    - JobScheduler Server 1.10.x  
+Client:  
+    - Google Chrome ver.40以上 or FireFox ver.40以上  
 
 # Architecture
 ![Architecture](/images/)

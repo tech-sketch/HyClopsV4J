@@ -1,5 +1,5 @@
 # About
-## JobScheduler
+### JobScheduler
 JobSchedulerはドイツのSoftware und Organisations-Service GmbHで開発されている、  
 非常に豊富な機能を有したOSSのジョブ運用自動化ツールです。  
 JobSchedulerには、
@@ -13,7 +13,7 @@ JobSchedulerには、
 等の特徴があり、近年非常に注目されているエンタープライズ向けのジョブ運用管理ツールです。  
 詳細につきましては、<http://www.sos-berlin.com/jobscheduler>をご参照ください。
 
-# HyClopsV4J
+### HyClopsV4J
 Web管理ツールであるJOCには存在しない機能である、ジョブの実行履歴とその状態をグラフィカルに可視化するためのツールです。  
 表示されているジョブもしくはオーダをクリックすることで該当のログを  
 レスポンシブで表示し、エラーの原因特定に役立てることができます。  
@@ -39,7 +39,7 @@ Web管理ツールであるJOCには存在しない機能である、ジョブ�
 * 表示されているジョブフローから任意のジョブのログを1クリックで表示可能  
 * 全てレスポンシブで表示可能  
 
-## Restriction
+### Restriction
 * ジョブの実行履歴は最新の状態のみ表示可能  
     * 一度に表示可能なジョブチェインは20個、1つのジョブチェインに含まれるジョブは30個まで  
     * 表示可能な実行状態は、"正常終了","異常終了","未実行"の3種類  
@@ -57,12 +57,12 @@ Web管理ツールであるJOCには存在しない機能である、ジョブ�
 ![Architecture](/images/architecture.png)
 
 # Installation
-## Preparation
+### Preparation
 下記ファイルとフォルダをダウンロードする
 * jobmap_illustration.html (ViewerのHTML)
 * viewer (スクリプト群)  
 
-## Process
+### Process
 1. Preparationに記載されているファイルを、JobSchedulerサーバにダウンロードする
 2. viewer/js/viewer.jsのパラメータを編集する  
 　　[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
@@ -90,12 +90,12 @@ gitを使ったインストール方法
 調査を行う
 
 # Future Works
-## ジョブ実行履歴表示  
+### ジョブ実行履歴表示  
 * ジョブ、オーダ単位での表示に対応  
 * 日付、時間によるジョブフィルタ機能  
     * 完全一致、前方一致/後方一致に対応
 
-## ログ表示
+### ログ表示
 * オーダのログの表示に対応  
 
 # Author

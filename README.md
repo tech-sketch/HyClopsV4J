@@ -44,21 +44,21 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 
 ## Process
 1. Preparationに記載されているファイルを、JobSchedulerサーバにダウンロードする
-2. viewer/js/viewer.jsのパラメータを編集する
-[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]   
+2. viewer/js/viewer.jsのパラメータを編集する  
+　　[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
 3. ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する
 4. 所有者を変更したファイルとフォルダを{SERVER_INSTALL_PATH}/operations_gui/に移動させる 
 5. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスし、  
 ページが表示されることを確認する
 
 ### Example
-gitを使ったインストール方法  
-$ cd /home/{JobScheduler_USER}/
-$ git clone https://github.com/tech-sketch/HyClopsV4J  
-$ vi viewer/js/viewer.js  
-      [url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
-$ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  
-$ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
+gitを使ったインストール方法 
+　$ cd /home/{JobScheduler_USER}/  
+　$ git clone https://github.com/tech-sketch/HyClopsV4J  
+　$ vi viewer/js/viewer.js  
+　　　　[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
+　$ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  
+　$ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
 
 # Usage
 1. ブラウザからhttp://{JobScheduler ServerのIPアドレス:4444}/jobmap_illustration.html へアクセスする  

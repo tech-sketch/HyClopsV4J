@@ -21,7 +21,7 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 * 表示されているジョブフローから任意のジョブのログを1クリックで表示可能  
 * 全てレスポンシブで表示可能  
 
-##Restriction
+## Restriction
 * ジョブの実行履歴は最新の状態のみ表示可能  
     * 一度に表示可能なジョブチェインは20個、1つのジョブチェインに含まれるジョブは30個まで  
     * 表示可能な実行状態は、"正常終了","異常終了","未実行"の3種類  
@@ -55,7 +55,7 @@ gitを使ったインストール方法
 $ cd /home/{JobScheduler_USER}/
 $ git clone https://github.com/tech-sketch/HyClopsV4J  
 $ vi viewer/js/viewer.js  
-  [url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]
+  [url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
 $ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  
 $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
 
@@ -67,16 +67,17 @@ $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/
 3. エラーが発生しているジョブやオーダがあれば該当する箇所をクリックし、ログを表示させ、  
 調査を行う
 
-#Future Works
-##ジョブ実行履歴表示  
+# Future Works
+## ジョブ実行履歴表示  
 * ジョブ、オーダ単位での表示に対応  
 * 日付、時間によるジョブフィルタ機能  
-** 完全一致、前方一致/後方一致に対応  
-##ログ表示
+    * 完全一致、前方一致/後方一致に対応
+
+## ログ表示
 * オーダのログの表示に対応  
 
 # Author
-Takashi Adachi (TIS Inc.)
+Takashi Adachi (TIS Inc.)  
 Kazuhiko Miyoshi (CyberCom Inc)
 
 # License

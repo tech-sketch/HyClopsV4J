@@ -75,10 +75,10 @@ Web管理ツールであるJOCには存在しない機能である、
 ### Example
 gitを使ったインストール方法  
 　$ cd /home/{JobScheduler_USER}/  
-　$ git clone https://github.com/tech-sketch/HyClopsV4J
-　$ cd HyClopsV4J/verx.x
+　$ git clone https://github.com/tech-sketch/HyClopsV4J  
+　$ cd HyClopsV4J/verx.x  
 　$ vi viewer/js/viewer.js  
-　　　　[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
+　　　　[url=http://jobscheduler_server:4444] → [url=http://JobScheduler ServerのIPアドレス]  
 　$ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  
 　$ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
 
@@ -95,14 +95,9 @@ gitを使ったインストール方法
 ### ジョブ実行履歴表示  
 * ジョブ、オーダ単位での表示に対応  
 * 日付、時間によるジョブフィルタ機能  
-    * 完全一致、前方一致/後方一致に対応
 
 ### ログ表示
 * オーダのログの表示に対応  
-
-# Author
-Takashi Adachi (TIS Inc.)  
-Kazuhiko Miyoshi (CyberCom Inc)
 
 # License
 [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)

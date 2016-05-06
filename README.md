@@ -12,14 +12,21 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 ※開発中の画面のため、変更がある可能性があります。
 
 # Release Notes
+* 2016/5/8 ver0.1を公開予定
 * 2016/4/22 READMEを公開
 
 # Features
-* ジョブの実行状態を可視化  
-    * オーダ、ジョブ、ジョブチェインの3種類の表示に対応  
-    * 日付/時刻、名前で表示したい情報をフィルタ可能  
+* ジョブの実行履歴状態を可視化  
+    * ジョブチェインの表示に対応 
 * 表示されているジョブフローから任意のジョブのログを1クリックで表示可能  
 * 全てレスポンシブで表示可能  
+
+##Restriction
+* ジョブの実行履歴は最新の状態のみ表示可能  
+    * 一度に表示可能なジョブチェインは20個、1つのジョブチェインに含まれるジョブは30個まで  
+    * 表示可能な実行状態は、"正常終了","異常終了","未実行"の3種類  
+* ジョブチェインの検索は部分一致のみ  
+* 一度に表示可能なログは1種類  
 
 # Requirement
 ### JobScheduler Server:  
@@ -31,24 +38,24 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 ![Architecture](/images/architecture.png)
 
 # Installation
-##Preparation
+## Preparation
 下記ファイルとフォルダをダウンロードする
 * jobmap_illustration.html (ViewerのHTML)
-* viewer (スクリプト群)
+* viewer (スクリプト群)  
 
-##Process
-1. Preparationに記載されているファイルをダウンロードする  
-2. viewer/js/viewer.jsのパラメータを編集する  
-[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]     
-3. ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する  
-4. 所有者を変更したファイルとフォルダを{SERVER_INSTALL_PATH}/operations_gui/に移動させる   
+## Process
+1. Preparationに記載されているファイルを、JobSchedulerサーバにダウンロードする
+2. viewer/js/viewer.jsのパラメータを編集する
+[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]   
+3. ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する
+4. 所有者を変更したファイルとフォルダを{SERVER_INSTALL_PATH}/operations_gui/に移動させる 
 
-###Example
-gitを使ったインストール方法  
+### Example
+gitを使ったインストール方法
 $ cd /home/{JobScheduler_USER}/
 $ git clone https://github.com/tech-sketch/HyClopsV4J  
 $ vi viewer/js/viewer.js  
-    [url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]
+  [url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]
 $ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  
 $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/  
 
@@ -61,10 +68,15 @@ $ mv jobmap_illustration.html viewer/ /{SERVER_INSTALL_PATH}/operations_gui/
 調査を行う
 
 #Future Works
-
+##ジョブ実行履歴表示  
+* ジョブ、オーダ単位での表示に対応  
+* 日付、時間によるジョブフィルタ機能  
+** 完全一致、前方一致/後方一致に対応  
+##ログ表示
+* オーダのログの表示に対応  
 
 # Author
-Takashi Adachi (TIS Inc.)  
+Takashi Adachi (TIS Inc.)
 Kazuhiko Miyoshi (CyberCom Inc)
 
 # License

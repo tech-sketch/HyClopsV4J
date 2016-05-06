@@ -51,13 +51,14 @@ JobSchedulerには、
 ![Architecture](/images/architecture.png)
 
 # Installation
-1. 下記HTMLファイルとフォルダをJobSchedulerサーバにダウンロードする  
-    * hyclopsv4j.html  
-    * viewer/  
-      * css/  
-      * js  
-`$ cd /home/{JobSchedulerの実行ユーザ}/`  
-`$ git clone https://github.com/tech-sketch/HyClopsV4J` 
+1. 下記HTMLファイルとフォルダをJobSchedulerサーバにダウンロードする
+  
+* hyclopsv4j.html
+* viewer/
+    * css/
+    * js  
+ `$ cd /home/{JobSchedulerの実行ユーザ}/`  
+ `$ git clone https://github.com/tech-sketch/HyClopsV4J`  
 2. viewer/js/viewer.jsのパラメータを編集する  
 url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPアドレス  
 `$ vi viewer/js/viewer.js`  
@@ -74,8 +75,11 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
   
 2. ジョブチェイン名を適宜指定し、検索ボタンをクリックする
 (ブランクの場合には*として検索される)
+![images](/images/usage2.png)
+
 3. ログを確認したいジョブがあれば該当する箇所をクリックし、ログを表示させる
 (ジョブ単位でログが表示される)
+![images](/images/usage3.png)
 
 # Future Works
 ###実行状態表示機能

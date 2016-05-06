@@ -1,5 +1,17 @@
 # About
-### JobScheduler
+## HyClops V4J
+OSSのジョブ運用自動化ツールであるJobSchedulerのジョブの実行状態を可視化するためのツールです。  
+表示されているジョブもしくはオーダをクリックすることで該当のログを  
+レスポンシブで表示し、ジョブ運用時における原因特定をスムーズに行うことができます。  
+
+またJobSchedulerサーバにファイルを追加するだけで導入できるため、  
+非常に手軽に利用できます。  
+(Webで管理をするためのJOCと関連付ける必要はありません)
+
+ジョブの実行状態とログ表示
+![images](/images/abstract1.png)
+
+### 補足: JobScheduler
 JobSchedulerはドイツのSoftware und Organisations-Service GmbHで開発されている、  
 非常に豊富な機能を有したOSSのジョブ運用自動化ツールです。  
 JobSchedulerには、
@@ -12,22 +24,6 @@ JobSchedulerには、
 
 等の特徴があり、近年非常に注目されているエンタープライズ向けのジョブ運用管理ツールです。  
 詳細につきましては、<http://www.sos-berlin.com/jobscheduler>をご参照ください。
-
-### HyClops V4J
-Web管理ツールであるJOCには存在しない機能である、  
-ジョブの実行状態とその状態をグラフィカルに可視化するためのツールです。  
-表示されているジョブもしくはオーダをクリックすることで該当のログを  
-レスポンシブで表示し、エラーの原因特定に役立てることができます。  
-
-またJobSchedulerサーバにファイルを追加するだけで導入できるため、  
-非常に手軽に利用できます。  
-(Webで管理をするためのJOCと関連付ける必要はありません)
-
-ジョブの実行状態表示
-![images](/images/abstract1.png)
-  
-ジョブのログを表示
-![images](/images/abstract2.png)
 
 # Features
 * ジョブの実行状態状態を可視化  
@@ -55,13 +51,12 @@ Web管理ツールであるJOCには存在しない機能である、
 
 # Installation
 1. 下記HTMLファイルとフォルダをJobSchedulerサーバにダウンロードする  
-    `$ cd /home/{JobSchedulerの実行ユーザ}/`  
-    `$ git clone https://github.com/tech-sketch/HyClopsV4J`  
     * hyclopsv4j.html  
     * viewer/  
-      * components  
       * css/  
       * js  
+`$ cd /home/{JobSchedulerの実行ユーザ}/`  
+`$ git clone https://github.com/tech-sketch/HyClopsV4J` 
 2. viewer/js/viewer.jsのパラメータを編集する  
 url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPアドレス  
 `$ vi viewer/js/viewer.js`  
@@ -79,6 +74,7 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
 2. ジョブチェイン名を適宜指定し、検索ボタンをクリックする
 (ブランクの場合には*として検索される)
 3. ログを確認したいジョブがあれば該当する箇所をクリックし、ログを表示させる
+(ジョブ単位でログが表示される)
 
 # Future Works
 ###実行状態表示機能
@@ -88,17 +84,18 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
         <td>概要</td>
     </tr>
     <tr>
-        <td>ジョブチェイン表示</td>
-        <td>並列のジョブチェインの表示</td>
+        <td>ジョブチェイン表示(並列)</td>
+        <td>splliter、内部APIを利用した並列ジョブチェインの表示</td>
     </tr>
     <tr>
-        <td>オーダ表示</td>
-        <td>オーダの実行一覧を表示</td>
+        <td>オーダ、ジョブ表示</td>
+        <td>オーダ、ジョブの実行一覧を表示</td>
     </tr>
     <tr>
-        <td>フィルタ機能(日付、時刻)</td>
-        <td>日付、時刻によるフィルタ機能</td>
+        <td>フィルタ機能(日付、時刻、オーダ名、ジョブ名)</td>
+        <td>該当パラメータによるフィルタ機能</td>
     </tr>
+    <tr>
     <tr>
         <td>画面の自動更新</td>
         <td>画面を一定時間ごとに自動で更新する</td>
@@ -117,7 +114,7 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
 </table>
 
 # Note
-* JOCにベーシック認証を適用している際には、その認証がそのまま本Viewerに適用される
+* JOCにベーシック認証を適用している際には、その認証がそのまま適用される
 
 # Release Notes
 * 2016/4/22 READMEを公開

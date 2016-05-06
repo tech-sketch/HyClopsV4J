@@ -52,7 +52,7 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 ページが表示されることを確認する
 
 ### Example
-gitを使ったインストール方法 
+gitを使ったインストール方法  
 　$ cd /home/{JobScheduler_USER}/  
 　$ git clone https://github.com/tech-sketch/HyClopsV4J  
 　$ vi viewer/js/viewer.js  

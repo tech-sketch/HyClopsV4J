@@ -55,7 +55,8 @@ JobSchedulerのジョブの実行履歴を可視化し、ジョブの状態を�
 ### Example
 gitを使ったインストール方法  
 　$ cd /home/{JobScheduler_USER}/  
-　$ git clone https://github.com/tech-sketch/HyClopsV4J  
+　$ git clone https://github.com/tech-sketch/HyClopsV4J
+　$ cd HyClopsV4J/verx.x
 　$ vi viewer/js/viewer.js  
 　　　　[url=http://jobscheduler_server:4444] → IPaddress of JobScheduler Server]  
 　$ chmod -R {JobScheduler_USER}:{JobScheduler_USER} viewer/ jobmap_illustration.html  

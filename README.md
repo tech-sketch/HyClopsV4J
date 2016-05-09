@@ -63,7 +63,7 @@ JobSchedulerには、
  `$ git clone https://github.com/tech-sketch/HyClopsV4J`  
  
 [2] viewer/js/viewer.jsに記載されている13行目のパラメータを編集する  
-url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPアドレス:ポート番号  
+url = http://Jobscheduler_Server:4444  →   url = http://JobScheduler ServerのIPアドレス:ポート番号  
 `$ vi viewer/js/viewer.js`  
 
 [3] ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する  

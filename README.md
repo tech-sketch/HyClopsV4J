@@ -48,6 +48,7 @@ JobSchedulerには、
     - JobScheduler Server: 1.10.x  
 ### Client:  
     - Google Chrome ver.40以上 or FireFox ver.40以上  
+    - インターネットと接続可能であること
 
 # Architecture
 ![アーキテクチャ](/images/architecture.png)

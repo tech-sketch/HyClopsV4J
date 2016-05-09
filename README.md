@@ -8,7 +8,7 @@ OSSのジョブ運用自動化ツールであるJobSchedulerのジョブの実�
 非常に手軽に利用できます。  
 
 ジョブの実行状態とログ表示
-![images](/images/abstract1.png)
+![全体像](/images/abstract1.png)
 
 ### 補足: JobScheduler
 JobSchedulerはドイツのSoftware und Organisations-Service GmbHで開発されている、  
@@ -50,7 +50,7 @@ JobSchedulerには、
     - Google Chrome ver.40以上 or FireFox ver.40以上  
 
 # Architecture
-![Architecture](/images/architecture.png)
+![アーキテクチャ](/images/architecture.png)
 
 # Installation
 [0] 下記HTMLファイルとフォルダをJobSchedulerサーバにダウンロードする
@@ -70,10 +70,10 @@ url = http://Jobscheduler_Server:4444  →   url = http://JobScheduler Serverの
 [2] ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する  
 `$ chmod -R {JobScheduler実行ユーザ}:{JobScheduler実行ユーザ} viewer/ hyclopsv4j.html`  
 
-[3] 所有者を変更したファイルとフォルダを[JobScheduler Serverのインストールパス]/operations_gui/に移動させる  
+[3] [2]のファイルとフォルダを[JobScheduler Serverのインストールパス]/operations_gui/に移動させる  
 `$ mv hyclopsv4j.html viewer/ /{JobSchedulerのインストールパス}/operations_gui/` 
 
-[4] ブラウザからhttp://{JobScheduler ServerのIPアドレス:ポート番号}/hyclopsv4j.html へアクセスし、  
+[4] ブラウザから{http://JobScheduler ServerのIPアドレス:ポート番号}/hyclopsv4j.html へアクセスし、  
 ページが表示されることを確認する  
 
 # Usage
@@ -84,11 +84,11 @@ url = http://Jobscheduler_Server:4444  →   url = http://JobScheduler Serverの
 (ブランクの場合には*として検索される)  
 ジョブの最新の実行状態が正常終了であれば黄緑色、エラーであれば赤色、未実行であれば青色で表示される
 各ジョブチェインの最後にはノードの終端を明示するために、finishノードが自動的に付加される
-![images](/images/usage2.png)
+![ジョブチェインの表示](/images/usage2.png)
 
 3. ログを確認したいジョブがあれば該当する箇所をクリックし、ログを表示させる
 (ジョブ単位でログが表示される)
-![images](/images/usage3.png)
+![ログ表示](/images/usage3.png)
 
 # Future Works 
 ###実行状態表示機能

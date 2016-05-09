@@ -1,0 +1,59 @@
+<!-- Copyright 2016 TIS Inc. HyClopsV4J (hyclops@ml.tis.co.jp)
+ Licensed under the Apache License, Version 2.0. The Apache v2 full text is 
+ published at [this link](http://www.apache.org/licenses/LICENSE-2.0).
+-->
+
+<!doctype html>
+<html ng-app="Viewer">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Angular JS Library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+        <!-- Viewer Script -->
+        <script src="viewer/js/viewer.js"></script>
+        <script src="viewer/components/api.js"></script>
+        <script src="viewer/components/log.js"></script>
+
+        <!-- Viewer CSS -->
+        <link rel="stylesheet" type="text/css" href="viewer/css/jobmap.css">
+
+        <!-- XmltoJson Script -->
+        <script src="viewer/js/xml2json.min.js"></script>
+
+    </head>
+    <body>
+        <div class="jobmap_area" ng-controller="JobMap">
+            <div id="header">
+                <!-- Unimplemented
+                    <input name="calender" type="text" ng-model="calender" size="20" placeholder="Calender"/>
+                    <br/>
+                    <input name="time" type="text" ng-model="time" size="20" placeholder="Time"/>
+                    <br/>
+                    <input name="order_name" type="text" ng-model="order_name" size="20" placeholder="Order Name"/>
+                    <br/>
+                    <input name="job_name" type="text" ng-model="job_name" size="20" placeholder="Job Name"/>
+                    <br/>
+                -->
+                <input name="jobchain_name" type="text" ng-model="jobchain_name" size="20" placeholder="JobChain Name"/>
+                <form class="form-inline">
+                    <button class="btn btn-default" ng-click="SearchHistory()">検索</button>
+                </form>
+            </div>
+            <canvas class="job_area"></canvas>
+            <div class="log_area">
+                <div id="log" ng-bind-html="textlog">
+                    {{textlog}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

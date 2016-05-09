@@ -1,0 +1,32 @@
+/*Copyright 2016 TIS Inc. HyClopsV4J (hyclops@ml.tis.co.jp)
+ * * Licensed under the Apache License, Version 2.0. The Apache v2 full text is 
+ * * published at [this link](http://www.apache.org/licenses/LICENSE-2.0).
+ * */
+
+#header {
+   text-align :center;
+   float right;
+}
+
+div.jobmap_area{
+}
+
+div.job_area {
+}
+
+div.log_area{
+background-color: #fff;
+width:100%;
+height:30%;
+position: fixed;
+bottom: 0px;
+padding: 10px 0;
+border-top: 1px dotted #000;
+}
+
+div.#log{
+border 0px;
+height: 27%;
+width: 95%;
+margin: auto;
+}

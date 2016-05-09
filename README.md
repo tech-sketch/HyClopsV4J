@@ -53,7 +53,7 @@ JobSchedulerには、
 ![Architecture](/images/architecture.png)
 
 # Installation
-1. 下記HTMLファイルとフォルダをJobSchedulerサーバにダウンロードする
+[1] 下記HTMLファイルとフォルダをJobSchedulerサーバにダウンロードする
   
 * hyclopsv4j.html
 * viewer/
@@ -62,17 +62,17 @@ JobSchedulerには、
  `$ cd /home/{JobSchedulerの実行ユーザ}/`  
  `$ git clone https://github.com/tech-sketch/HyClopsV4J`  
  
-2. viewer/js/viewer.jsに記載されている13行目のパラメータを編集する  
+[2] viewer/js/viewer.jsに記載されている13行目のパラメータを編集する  
 url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPアドレス:ポート番号  
 `$ vi viewer/js/viewer.js`  
 
-3. ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する  
+[3] ダウンロードしたファイルとフォルダ(サブフォルダ含む)の所有者をJobSchedulerの実行ユーザへ変更する  
 `$ chmod -R {JobScheduler実行ユーザ}:{JobScheduler実行ユーザ} viewer/ hyclopsv4j.html`  
 
-4. 所有者を変更したファイルとフォルダを[JobScheduler Serverのインストールパス]/operations_gui/に移動させる  
+[4] 所有者を変更したファイルとフォルダを[JobScheduler Serverのインストールパス]/operations_gui/に移動させる  
 `$ mv hyclopsv4j.html viewer/ /{JobSchedulerのインストールパス}/operations_gui/` 
 
-5. ブラウザからhttp://{JobScheduler ServerのIPアドレス:ポート番号}/hyclopsv4j.html へアクセスし、  
+[5] ブラウザからhttp://{JobScheduler ServerのIPアドレス:ポート番号}/hyclopsv4j.html へアクセスし、  
 ページが表示されることを確認する  
 
 # Usage
@@ -143,7 +143,7 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
 凡例
 ○: 実装完了
 △: 実装中
-×: 実装の準備中
+×: 未着手
 
 # Release Notes
 * 2016/5/9 ver0.1を公開

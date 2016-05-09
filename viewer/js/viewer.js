@@ -13,7 +13,6 @@ angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logP
             /* You should change following the IP Address & Port to your JobScheduler Server.
              */
             url = 'http://JobScheduler_Server:4444/';
-	    url = 'http://52.38.242.80:4444/';
             /********************************************************************************/
 
             $log.debug("Loading JobMap Module");

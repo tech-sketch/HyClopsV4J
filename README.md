@@ -59,8 +59,9 @@ JobSchedulerには、
 * viewer/
     * css/
     * js  
- `$ cd /home/{JobSchedulerの実行ユーザ}/`  
- `$ git clone https://github.com/tech-sketch/HyClopsV4J`  
+
+`$ cd /home/{JobSchedulerの実行ユーザ}/`  
+`$ git clone https://github.com/tech-sketch/HyClopsV4J`  
  
 [1] viewer/js/viewer.jsに記載されている13行目のパラメータを編集する  
 url = http://Jobscheduler_Server:4444  →   url = http://JobScheduler ServerのIPアドレス:ポート番号  

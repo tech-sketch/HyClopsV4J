@@ -88,23 +88,31 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
     <tr>
         <td>機能名</td>
         <td>概要</td>
+        <td>進捗</td>
     </tr>
+    <tr>
+       <td>ジョブチェイン表示(直列)</td>
+       <td>直列ジョブチェインの表示</td>
+       <td>○</td>
     <tr>
         <td>ジョブチェイン表示(並列)</td>
         <td>splliter、内部APIを利用した並列ジョブチェインの表示</td>
-    </tr>
+        <td>一部○</td>
+        </tr>
     <tr>
         <td>オーダ、ジョブ表示</td>
         <td>オーダ、ジョブの実行一覧を表示</td>
+        <td>△</td>
     </tr>
     <tr>
         <td>フィルタ機能(日付、時刻、オーダ名、ジョブ名)</td>
         <td>該当パラメータによるフィルタ機能</td>
+        <td>一部○<\td>
     </tr>
-    <tr>
     <tr>
         <td>画面の自動更新</td>
         <td>画面を一定時間ごとに自動で更新する</td>
+        <td>×</td>
     </tr>
 </table>
 ###ログ表示機能
@@ -112,10 +120,12 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
     <tr>
         <td>機能名</td>
         <td>概要</td>
+        <td>進捗</td>
     </tr>
     <tr>
         <td>オーダのログ表示</td>
         <td>指定したオーダのログを表示する</td>
+        <td>△</td>
     </tr>
 </table>
 

@@ -107,7 +107,7 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
     <tr>
         <td>フィルタ機能(日付、時刻、オーダ名、ジョブ名)</td>
         <td>該当パラメータによるフィルタ機能</td>
-        <td>一部○<\td>
+        <td>一部○</td>
     </tr>
     <tr>
         <td>画面の自動更新</td>

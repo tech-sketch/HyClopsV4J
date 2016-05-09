@@ -125,6 +125,10 @@ url=http://Jobscheduler_Server:4444 → url=http://JobScheduler ServerのIPア�
 # Release Notes
 * 2016/4/22 READMEを公開
 
+# Contact
+お問い合わせは下記メールアドレスまでお願いします。  
+hyclops@ml.tis.co.jp
+
 # License
 [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 

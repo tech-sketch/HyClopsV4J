@@ -4,7 +4,7 @@
 */
 
 angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logProvider) {
-        $logProvider.debugEnabled(false);
+        $logProvider.debugEnabled(true);
     }])
 
 //controller module
@@ -56,7 +56,7 @@ angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logP
                             obj = xmltoJson(data);
 
                             jobchain_obj = obj.spooler.answer.state.job_chains.job_chain;
-                            jobchain_obj_history = obj.spooler.answer.state.jobs;
+                            jobchain_obj_history = obj.spooler.answer.state.jobs.job;
 
                             /* Unimplemented
                              if(!angular.isUndefined(parameter.jobchain_name)){
@@ -206,30 +206,33 @@ angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logP
                     angular.forEach(job_chains, function (value, index, job_chains) {
                         $log.debug(value);
                         nodes = value.job_chain_node;
-
+			$log.debug(nodes);
                         $log.debug("==========draw jobchain:" + value._name + "===============");
 
                         drawText(ctx, TextColor, nowx, nowy - fontspace, value._name, defaultfontstyle, defaultfontsize, defaultfontkind);
                         jobchain = value._name;
-                        $log.debug(jobchain_obj_history);
+			jobchain_title = "";
 
-                        state = "finish";
-
+		     angular.forEach(nodes, function (value_node, index_node, nodes) {
+			state = "";
+			$log.debug("===========================value_node=============================");
+			jobchain_title = value_node._job;
                         angular.forEach(jobchain_obj_history, function (value_history, index_history, jobchain_obj_history) {
-                            tmphistory = value_history.history;
+			    tmphistory = value_history.history;
                             angular.forEach(tmphistory, function (task, index_task, tmphistory) {
-                                if (typeof (task._job_name) !== "undefined") {
-                                    if (jobchain.match(task._job_name)) {
-                                        if (typeof (task[0]._code)) {
-                                            state = "error";
+                                 if(!angular.isUndefined(jobchain_title)){
+				     if (jobchain_title.match(task._job_name) && state == "" && typeof(task._jobname) !== "undefined") {
+                                        if (!angular.isUndefined (task[0].ERROR)) {
+                                                state = "error";
                                         } else {
                                             state = "finish";
                                         }
+
                                     } else if (task.length > 1) {
                                         angular.forEach(task, function (task_job, index_task, task) {
                                             if (typeof (task_job._job_name) !== "undefined") {
-                                                if (jobchain.match(task_job._job_name)) {
-                                                    if (typeof (task[0]._code)) {
+                                                if (jobchain_title.match(task_job._job_name)) {
+                                                    if (!angular.isUndefined(task[0].ERROR)) {
                                                         state = "error";
                                                     } else {
                                                         state = "finish";
@@ -237,17 +240,16 @@ angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logP
                                                 }
                                             }
                                         });
-                                    } else
-                                        state = "unexecuted";
-                                }
+                                    } 
+				}
                             });
 
                         });
+			if(state === "")
+				state = "unexecuted";
 
-                        $log.debug(state);
+                        $log.debug("state: " + state);
 
-                        //Draw Job Nodes and Allow 
-                        angular.forEach(nodes, function (value_node, index_node, nodes) {
                             // Print Jobchains of Parallel (Unimplemented)
                             if (!angular.isUndefined(value_node._job)) {
                                 if (value_node._job.match("jitl") != null) {
@@ -267,6 +269,20 @@ angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logP
                                 obj['nodename'] = value_node._state;
                                 obj['jobname'] = value_node._job;
                                 $scope.nodes.push(obj);
+
+				//choose Job and Node Color
+				if(state == "error"){
+				    NodeColor = "#ff0000";
+				    JobColor = "#ff6347";
+				}
+				else if(state == "unexecuted"){
+				    NodeColor = "#87ceeb";
+				    JobColor = "#4682b4";
+				}
+				else{
+				    NodeColor = "#98fb98";
+				    JobColor = "#00ff7f";	
+				}
 
                                 //Draw Rectangle
                                 drawRect(ctx, NodeColor, JobColor, nowx, nowy, defaultwidth, defaultheight, value_node._state, value_node._job);
@@ -373,7 +389,7 @@ angular.module("Viewer", ['ngSanitize']).config(['$logProvider', function ($logP
                 //参考: http://honttoni.blog74.fc2.com/blog-entry-185.html
                 //Draw Rectangle Nodes
                 function drawRect(ctx, NodeColor, JobColor, x, y, w, h, nodename, jobname) {
-                    //Circle of Outline
+		    //Circle of Outline
                     ctx.beginPath();
                     ctx.moveTo(x + 10, y);
                     ctx.arcTo(x + w, y, x + w, y + 10, 10);
